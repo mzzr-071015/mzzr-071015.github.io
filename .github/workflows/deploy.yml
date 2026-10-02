@@ -26,10 +26,11 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: 
-          npm install hexo-theme-butterfly
-          npm install hexo-renderer-pug hexo-renderer-stylus --save
+        run: |
+          mkdir -p themes/butterfly
+          cp -R node_modules/hexo-theme-butterfly/. themes/butterfly/
           npm run build
+          touch public/.nojekyll
 
       - name: Publish to master
         uses: peaceiris/actions-gh-pages@v4
