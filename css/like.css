@@ -1,0 +1,6 @@
+.post-like{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;
+  border:1px solid #ddd;border-radius:20px;background:transparent;
+  color:#666;cursor:pointer;font-size:.85rem;line-height:1.6;transition:.2s}
+.post-like .heart{color:#ff6b81}
+.post-like.active{border-color:#ff6b81;color:#ff6b81}
+.post-like:disabled{opacity:.7;cursor:default}
